@@ -37,5 +37,5 @@
 └──────────────────────┘          └──────────────────────┘
 ```
 
-RAG
+RAG Example
 ![Demo Screenshot](assets/chat_pdf_example.png)
