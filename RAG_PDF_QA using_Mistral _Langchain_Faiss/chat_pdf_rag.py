@@ -1,4 +1,4 @@
-#complete code
+
 import gradio as gr
 from PyPDF2 import PdfReader
 from langchain.vectorstores import FAISS
@@ -59,7 +59,7 @@ def process_pdf(file):
             metadata={"chunk_id": i}
         ))
 
-    # ✅ Use documents, not just plain chunks
+    
     db = FAISS.from_documents(documents, embedding=embedding_model)
     return "✅ PDF processed and indexed."
 
