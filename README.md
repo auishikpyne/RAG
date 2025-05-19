@@ -1,4 +1,6 @@
 # RAG
+🚀 Coming Soon
+This project will be live on Hugging Face Spaces soon. Stay tuned for the interactive demo!
 ## System Design 🏗️
 
 ```plaintext
