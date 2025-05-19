@@ -38,4 +38,4 @@
 ```
 
 RAG
-![Demo Screenshot](assets/chat_pdf.png)
+![Demo Screenshot](assets/chat_pdf_example.png)
