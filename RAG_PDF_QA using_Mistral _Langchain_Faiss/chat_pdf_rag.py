@@ -90,6 +90,7 @@ Answer:"""
 
     return response, sources
 
+
 # Gradio UI
 with gr.Blocks() as demo:
     gr.Markdown("### 🧠 Chat with PDF — Source-aware Answers")
@@ -97,6 +98,7 @@ with gr.Blocks() as demo:
     with gr.Row():
         pdf_input = gr.File(label="Upload PDF")
         upload_btn = gr.Button("Process PDF")
+        status_output = gr.Textbox(label="📄 Status")  # New field
 
     query_input = gr.Textbox(label="Ask a question about the PDF")
     submit_btn = gr.Button("Get Answer")
@@ -104,7 +106,8 @@ with gr.Blocks() as demo:
     answer_output = gr.Textbox(label="Answer")
     source_output = gr.Markdown(label="🔍 Context Sources")
 
-    upload_btn.click(process_pdf, inputs=pdf_input, outputs=answer_output)
+    upload_btn.click(process_pdf, inputs=pdf_input, outputs=status_output)
     submit_btn.click(answer_question, inputs=query_input, outputs=[answer_output, source_output])
 
 demo.launch(debug=True)
+
